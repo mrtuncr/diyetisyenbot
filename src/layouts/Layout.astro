@@ -40,7 +40,8 @@ const { title } = Astro.props;
 
   html {
     font-family: system-ui, sans-serif;
-    background-color: var(--c-bg);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
     color: var(--c-fg);
   }
 
@@ -53,15 +54,16 @@ const { title } = Astro.props;
 
   main {
     width:60%;
-    min-height: calc(100vh - 4rem);
-    margin: 0 auto;
+    min-height: 100vh;
+    margin: 25px auto;
     padding: 6rem 2rem 4rem;
-    background: rgba(255, 255, 255, 0.47);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.9px);
-    -webkit-backdrop-filter: blur(8.9px);
-    border: 1px solid rgba(255, 255, 255, 0.82);
+
+background: rgba(255, 255, 255, 0.95);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.9px);
+-webkit-backdrop-filter: blur(2.9px);
+border: 1px solid rgba(255, 255, 255, 0.85);
     
   }
 
@@ -82,7 +84,9 @@ const { title } = Astro.props;
 
   @media screen and (max-width: 768px) {
     main {
-      min-height: calc(100vh - 4.5rem);
+      min-height: 100vh;
+      width:auto;
+      margin: 25px auto;
     }
   }
   ::view-transition-old(root),
