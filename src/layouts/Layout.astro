@@ -52,10 +52,17 @@ const { title } = Astro.props;
   }
 
   main {
-    max-width: 70ch;
+    width:60%;
     min-height: calc(100vh - 4rem);
     margin: 0 auto;
     padding: 6rem 2rem 4rem;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    
   }
 
   ::-webkit-scrollbar {

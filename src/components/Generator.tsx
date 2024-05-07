@@ -249,19 +249,19 @@ export default () => {
         when={!loading()}
         fallback={() => (
           <div class="gen-cb-wrapper">
-            <span>AI is thinking...</span>
-            <div class="gen-cb-stop" onClick={stopStreamFetch}>Stop</div>
+            <span>Lütfen biraz bekleyiniz..</span>
+            <div class="gen-cb-stop" onClick={stopStreamFetch}>Durdur</div>
           </div>
         )}
       >
         <div class="gen-text-wrapper relative">
-          <button title="Picture" onClick={handlePictureUpload} class="absolute left-1rem top-50% translate-y-[-50%]">
+          {/* <button title="Picture" onClick={handlePictureUpload} class="absolute left-1rem top-50% translate-y-[-50%]">
             <Picture />
-          </button>
+          </button> */}
           <textarea
             ref={inputRef!}
             onKeyDown={handleKeydown}
-            placeholder="Enter something..."
+            placeholder="Lütfen sorunuzu yazınız"
             autocomplete="off"
             autofocus
             onInput={() => {
@@ -272,9 +272,9 @@ export default () => {
             class="gen-textarea"
           />
           <button onClick={handleButtonClick} gen-slate-btn>
-            Send
+            Gönder
           </button>
-          <button title="Clear" onClick={clear} gen-slate-btn>
+          <button title="Temizle" onClick={clear} gen-slate-btn>
             <IconClear />
           </button>
         </div>
