@@ -8,7 +8,7 @@ const genAI = apiBaseUrl
   : new GoogleGenerativeAI(apiKey)
 
 export const startChatAndSendMessageStream = async(history: ChatMessage[], newMessage: string) => {
-  const model = genAI.getGenerativeModel({ model: 'gemini-pro' })
+  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro-latest' })
 
   const chat = model.startChat({
     history: history.map(msg => ({
@@ -16,7 +16,7 @@ export const startChatAndSendMessageStream = async(history: ChatMessage[], newMe
       parts: msg.parts.map(part => part.text).join(''), // Join parts into a single string
     })),
     generationConfig: {
-      maxOutputTokens: 8000,
+      maxOutputTokens: 8500,
     },
     safetySettings: [
       {category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE'},
